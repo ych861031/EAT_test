@@ -7,8 +7,10 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener,PersonalFragment.OnFragmentInteractionListener {
 
@@ -52,4 +54,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
 }

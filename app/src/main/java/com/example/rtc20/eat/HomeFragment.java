@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -64,11 +66,23 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
+    //等同Activity onCreate
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        // 取得要回傳的view
+        final View view = inflater.inflate(R.layout.fragment_home, container, false);
+        Button button = view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(view.getContext(),"home button",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        //回傳view
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
